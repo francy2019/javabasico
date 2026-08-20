@@ -1,0 +1,47 @@
+En el capítulo CRUD: Create - Parte 3, se crea la instancia de PageService para permitir la inyección de dependencias a través de una interfaz. Esto es una buena práctica en Spring porque:
+
+Inversión de Control: Spring promueve el uso de interfaces para que el contenedor pueda inyectar la implementación correcta en el momento de la ejecución, lo que facilita la flexibilidad y el mantenimiento del código.
+
+Desacoplamiento: Al depender de la interfaz en lugar de una implementación concreta, tu código se vuelve menos dependiente de implementaciones específicas. Esto permite hacer cambios en la implementación sin afectar el código que utiliza el servicio.
+
+Testabilidad: Usar interfaces permite realizar pruebas más efectivas, ya que puedes crear implementaciones de prueba (mock) de PageService sin necesidad de instanciar la implementación real.
+
+Por estas razones, se recomienda crear instancias de interfaces en vez de instancias directas de su implementación en el método main. Si tienes más preguntas sobre este concepto o necesitas aclaraciones adicionales, ¡pregunta!
+------------------------
+EJEMPLO DE JOIN
+------------------------
+Hibernate: 
+    select
+        ue1_0.id,
+        ue1_0.age,
+        ue1_0.mail,
+        ue1_0.name,
+        p1_0.id,
+        p1_0.date_creation,
+        p1_0.title,
+        ue1_0.passwor 
+    from
+        app_user ue1_0 
+    left join
+        page p1_0 
+            on ue1_0.id=p1_0.id_user 
+    where
+        ue1_0.id=?
+Hibernate: 
+    insert 
+    into
+        page
+        (date_creation, title, id_user, id) 
+    values
+        (?, ?, ?, default)
+		
+
+
+***********+
+leer sonre Stream. List y ArrayList
+
+**************JOIM netre PAgina y Post
+SELECT * FROM PAGE pa JOIN POST po ON po.id_page = pa.id WHERE pa.title = 'CreandoTituloController'
+
+fhernandezv2015@gmail.com
+NewAccount2015**
