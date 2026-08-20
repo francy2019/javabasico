@@ -42,6 +42,3 @@ leer sonre Stream. List y ArrayList
 
 **************JOIM netre PAgina y Post
 SELECT * FROM PAGE pa JOIN POST po ON po.id_page = pa.id WHERE pa.title = 'CreandoTituloController'
-
-fhernandezv2015@gmail.com
-NewAccount2015**
